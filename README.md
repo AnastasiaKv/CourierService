@@ -12,3 +12,4 @@ Projects has the following functionality:
 - ability of quick execution set of tasks for courier.  
 
 Tools: ASP.NET MVC, LINQ, Entity Framework, C#, MS SQL Server 2012, JavaScript, HTML, CSS, Ajax, JSON, SDK, Xamarin.  
++ UnitOfWork Pattern 
