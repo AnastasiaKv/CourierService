@@ -1,0 +1,86 @@
+﻿@using Resources
+@{
+    ViewBag.Title = "Details";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>"Details"</title>
+    <!-- Bootstrap -->
+    <link href="Content/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Content/assets/css/bootstrap.vertical-tabs.css">
+    <link rel="stylesheet" href="Content/packages/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="Content/packages/touchspin/jquery.bootstrap-touchspin.css">
+    <link rel="stylesheet" href="Content/packages/jasny/css/jasny-bootstrap.min.css">
+    <link href="Content/assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body id="page-about" class="page-about">
+    <div class="container">
+        <h1 class="page-title">Details</h1>
+        <div class="row row-margin">
+            <div class="col-md-12">
+                <img src="/Content/images/3d-delivery-man-with-cap-badge.jpg" style="float: left; margin-right: 20px;" alt="Image 1">
+                ...
+            </div>
+        </div>
+        <div class="row row-promo">
+            <div class="col-md-4 promo promo-default">
+                <div class="well well-sm">
+                    <a href="@Url.Action("About", "Home")">
+                        <div class="round-header">
+                            <span class="fa fa-globe fa-3x"></span>
+                        </div>
+                        <h4>@Resources.AboutUs</h4>
+                        @Resources.AboutUsText
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 promo">
+                <div class="well well-sm">
+                    <a href="@Url.Action("Details", "Home")">
+                        <div class="round-header">
+                            <span class="fa fa-gift fa-3x"></span>
+                        </div>
+                        <h4>@Resources.DeliveryDetails</h4>
+                        @Resources.DeliveryDetailsText
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 promo">
+                <div class="well well-sm">
+                    <a href="">
+                        <div class="round-header">
+                            <span class="fa fa-hand-o-down fa-3x"></span>
+                        </div>
+                        <h4>@Resources.Help</h4>
+                        @Resources.HelpText
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="Content/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Content/packages/jssor/js/jssor.js"></script>
+    <script type="text/javascript" src="Content/packages/jssor/js/jssor.slider.js"></script>
+    <script type="text/javascript" src="Content/packages/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script type="text/javascript" src="Content/packages/iCheck/icheck.js"></script>
+    <script type="text/javascript" src="Content/packages/multirowselect/multirowselect.js"></script>
+    <script type="text/javascript" src="Content/packages/ion.rangeslider/js/ion.rangeSlider.js"></script>
+    <script type="text/javascript" src="Content/packages/elevatezoom/jquery.elevatezoom.js"></script>
+    <script type="text/javascript" src="Content/packages/touchspin/jquery.bootstrap-touchspin.js"></script>
+    <script type="text/javascript" src="Content/packages/jasny/js/jasny-bootstrap.js"></script>
+    <script type="text/javascript" src="Content/assets/js/app.js"></script>
+</body>
+
+</html>
+

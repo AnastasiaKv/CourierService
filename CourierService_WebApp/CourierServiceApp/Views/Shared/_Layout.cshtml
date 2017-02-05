@@ -1,0 +1,82 @@
+﻿@using Resources
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <div id=”Menu”>
+        @{ Html.RenderAction("_Menu", "Base"); }
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <footer>
+        <!-- start footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- start column -->
+                    <div class="col-md-4">
+                        <div class="panel panel-footer">
+                            <div class="panel-heading">
+                                @Resources.CanWeHelp
+                            </div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        <a href="@Url.Action("Contact", "Home")" title="About us">@Resources.ContactUs</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index","OrderHistory")" title="Orders history">@Resources.OrderHistory</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end column -->
+                    <!-- start column -->
+                    <div class="col-md-4">
+                        <div class="panel panel-footer">
+                            <div class="panel-heading">
+                                @Resources.FollowUs
+                            </div>
+                            <div class="panel-body">
+                                <div class="social-links">
+                                    <a href="#" class="social-link"><i class="fa fa-twitter fa-2x"></i></a>
+                                    <a href="#" class="social-link"><i class="fa fa-google-plus fa-2x"></i></a>
+                                    <a href="#" class="social-link"><i class="fa fa-instagram fa-2x"></i></a>
+                                    <a href="#" class="social-link"><i class="fa fa-facebook fa-2x"></i></a>
+                                    <a href="#" class="social-link"><i class="fa fa-pinterest fa-2x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end column -->
+                    <!-- start column -->
+                    <div class="col-md-4">
+                        <div class="panel panel-footer">
+                            <div class="panel-heading">
+                                @Resources.CallUsNow
+                            </div>
+                            <div class="panel-body">
+                                (063)1377367
+                            </div>
+                            <div class="panel-body">
+                                (098)2246500
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end column -->
+                </div>
+            </div>
+        </div>
+        <!-- end footer -->
+    </footer>
+</body>
+</html>

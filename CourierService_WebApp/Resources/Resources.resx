@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="AboutUsText" xml:space="preserve">
+    <value>UDS offer the UA's most flexible delivery service options, based around your busy lifestyle. We can come and pick your packages up from your door.</value>
+  </data>
+  <data name="AccountDetails" xml:space="preserve">
+    <value>ACCOUNT DETAILS</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AgreeText" xml:space="preserve">
+    <value>I agree that the information entered is correct, that the shipment does not contain any prohibited goods and that the parcel is less than 15kg, less than 120cm in length and a maximum combined length and circumference of 225cm. If you breach any of these conditions then we may charge you reasonable administration charges.</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="CallUsNow" xml:space="preserve">
+    <value>CALL US NOW</value>
+  </data>
+  <data name="CanWeHelp" xml:space="preserve">
+    <value>CAN WE HELP?</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="ChangeUsername" xml:space="preserve">
+    <value>Change username</value>
+  </data>
+  <data name="Checkout" xml:space="preserve">
+    <value>Checkout</value>
+  </data>
+  <data name="ChooseOne" xml:space="preserve">
+    <value>choose one</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="Delivary" xml:space="preserve">
+    <value>DELIVERY</value>
+  </data>
+  <data name="DeliveryDetails" xml:space="preserve">
+    <value>DELIVERY DETAILS</value>
+  </data>
+  <data name="DeliveryDetailsText" xml:space="preserve">
+    <value>Door to door courier service - Our local couriers will pick up from your door and we will aim to deliver your parcel within 3 working days.</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>DESCRIPTION</value>
+  </data>
+  <data name="EditProfile" xml:space="preserve">
+    <value>EDIT PROFILE</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="EnterEmail" xml:space="preserve">
+    <value>enter email</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>enter name</value>
+  </data>
+  <data name="ExpectedDate" xml:space="preserve">
+    <value>Expected date</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="FollowUs" xml:space="preserve">
+    <value>FOLLOW US</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="GeneralCustomerService" xml:space="preserve">
+    <value>General Customer Service</value>
+  </data>
+  <data name="GrandTotal" xml:space="preserve">
+    <value>GRANT TOTAL</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="HelpText" xml:space="preserve">
+    <value>If you need some help, click here!</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>UA Delivery Service</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>My account</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>Old password</value>
+  </data>
+  <data name="OrderHistory" xml:space="preserve">
+    <value>Orders history</value>
+  </data>
+  <data name="OrderHistoryUp" xml:space="preserve">
+    <value>ORDERS HISTORY</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>other...</value>
+  </data>
+  <data name="OurServices" xml:space="preserve">
+    <value>Our services</value>
+  </data>
+  <data name="Pages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="ParcelCapacity" xml:space="preserve">
+    <value>Parcel capacity</value>
+  </data>
+  <data name="ParcelContent" xml:space="preserve">
+    <value>Parcel content</value>
+  </data>
+  <data name="ParcelDetails" xml:space="preserve">
+    <value>PARCEL DETAILS</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>PAYMENT</value>
+  </data>
+  <data name="PayNow" xml:space="preserve">
+    <value>Pay Now</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="PleaseLoginBellow" xml:space="preserve">
+    <value>Please, login bellow</value>
+  </data>
+  <data name="PleaseSelectWeight" xml:space="preserve">
+    <value>Please, select weight</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="ProceedToCheckout" xml:space="preserve">
+    <value>Proceed to checkout</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>remove</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="SendAParcel" xml:space="preserve">
+    <value>Send a parcel</value>
+  </data>
+  <data name="SendMessage" xml:space="preserve">
+    <value>Send Message</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="Signup" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="Slogan" xml:space="preserve">
+    <value>Makes delivery easy.</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Suggestions" xml:space="preserve">
+    <value>Suggestions</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="UDS" xml:space="preserve">
+    <value>UDS</value>
+  </data>
+  <data name="UserInfo" xml:space="preserve">
+    <value>User info</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="UsernameOrEmail" xml:space="preserve">
+    <value>username or email</value>
+  </data>
+  <data name="UserProfile" xml:space="preserve">
+    <value>User profile</value>
+  </data>
+  <data name="WhatParcelContain" xml:space="preserve">
+    <value>What does your parcel contain? (This will not appear on the label)</value>
+  </data>
+  <data name="Сurrency" xml:space="preserve">
+    <value>UAH</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>Create a new account.</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterNewUser" xml:space="preserve">
+    <value>Register as a new user</value>
+  </data>
+  <data name="UseLocalAccount" xml:space="preserve">
+    <value>Use a local account to log in.</value>
+  </data>
+  <data name="DeliveryDetailsLower" xml:space="preserve">
+    <value>Delivery details</value>
+  </data>
+  <data name="AboutText1" xml:space="preserve">
+    <value>UDS offer the UA's most flexible delivery service options, based around your busy lifestyle. We can come and pick your packages up from your door, or if you're out at work during the day you can drop off your parcel at a ParcelShop at a time to suit you.Door to door courier service - Our local couriers will pick up from your door and we will aim to deliver your parcel within 3 working days. We offers a door to door collection and delivery service through 10,000 local couriers, offering simple, convenient and affordable parcel delivery.</value>
+  </data>
+  <data name="AboutText2" xml:space="preserve">
+    <value>Couriers:</value>
+  </data>
+  <data name="AboutText3" xml:space="preserve">
+    <value>UDS couriers are recruited from within the areas that they live, which means that their local knowledge is second to none. For example if your customer/recipient isn’t at home but works around the corner, our couriers will usually be only too happy to make a detour to ensure the customer receives their parcel as soon as possible. You will also benefit from our industry leading first time delivery hit rate which means that the recipient won’t have to travel to a sorting office if they miss the delivery, the local courier will attempt to deliver up to three times.</value>
+  </data>
+  <data name="AboutText4" xml:space="preserve">
+    <value>Safe place:</value>
+  </data>
+  <data name="AboutText5" xml:space="preserve">
+    <value>A local courier can collect from your door or if you aren’t able to be present, the courier will collect from your nominated safe place. You can also ask your customer/recipient for a safe place for their parcel to be delivered if they are not able to be present and we will deliver it there. With our excellent online tracking capability you will know when it has been delivered. Multiple parcel sending. If you send multiple parcels at a time, check out our import function, which will save you time as you can import your orders from platforms and market places  such as Shopify, Linnworks, ChannelAdvisor, eBay, Amazon or upload CSV files.</value>
+  </data>
+</root>

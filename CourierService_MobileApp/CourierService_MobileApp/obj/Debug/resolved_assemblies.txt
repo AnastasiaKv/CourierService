@@ -1,0 +1,17 @@
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\CourierService_MobileApp.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\Mono.Android.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\mscorlib.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\Newtonsoft.Json.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\Refractored.Controls.CircleImageView.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\System.Core.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\System.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\System.Xml.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\System.Xml.Linq.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\Xamarin.Android.Support.Design.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\Xamarin.Android.Support.v4.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\Xamarin.Android.Support.v7.AppCompat.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\Xamarin.Android.Support.v7.RecyclerView.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\Xamarin.Android.Support.Vector.Drawable.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\System.Runtime.Serialization.dll
+D:\Projects\Coursework\CourierService_MobileApp\CourierService_MobileApp\obj\Debug\assemblies\System.ServiceModel.Internals.dll

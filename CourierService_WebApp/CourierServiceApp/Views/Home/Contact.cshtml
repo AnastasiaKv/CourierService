@@ -1,0 +1,107 @@
+﻿@using Resources
+@{
+    ViewBag.Title = Resources.ContactUs;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Resources.ContactUs</title>
+    <!-- Bootstrap -->
+    <link href="Content/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Content/assets/css/bootstrap.vertical-tabs.css">
+    <link rel="stylesheet" href="Content/packages/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="Content/packages/ion.rangeslider/css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="Content/packages/ion.rangeslider/css/ion.rangeSlider.skinFlat.css">
+    <link rel="stylesheet" href="Content/packages/iCheck/skins/flat/flat.css">
+    <link rel="stylesheet" href="Content/packages/multirowselect/multirowselect.css">
+    <link rel="stylesheet" href="Content/packages/touchspin/jquery.bootstrap-touchspin.css">
+    <link rel="stylesheet" href="Content/packages/jasny/css/jasny-bootstrap.min.css">
+    <link href="Content/assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body id="page-contact" class="page-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- START PAGE TITLE -->
+                <h1 class="page-title">@Resources.ContactUs</h1>
+                <!-- END PAGE TITLE -->
+            </div>
+            <!-- START MAP -->
+            <iframe src="https://www.google.com/maps/embed/v1/place?q=Львівський+національний+університет+імені+Івана+Франка,+вулиця+Університетська,+Львів,+Україна&key=AIzaSyDJ7xhXpfXMwqDaFDp_lizt4TCu_EED38s" height="450" style="border:0; margin-bottom: 20px;" class="col-md-12"></iframe>
+            <!-- END MAP -->
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+                    <!-- START CONTACT FORM -->
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">@Resources.Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="@Resources.EnterName" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">@Resources.EmailAddress</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-envelope"></span>
+                                        </span>
+                                        <input type="email" class="form-control" id="email" placeholder="@Resources.EnterEmail" required="required" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">@Resources.Subject</label>
+                                    <select id="subject" name="subject" class="form-control" required="required">
+                                        <option value="" selected="">@Resources.ChooseOne:</option>
+                                        <option value="service">@Resources.GeneralCustomerService</option>
+                                        <option value="suggestions">@Resources.Suggestions</option>
+                                        <option value="product">@Resources.Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">
+                                        @Resources.Message
+                                    </label>
+                                    <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="@Resources.Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">@Resources.SendMessage</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END CONTACT FORM -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="Content/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Content/packages/jssor/js/jssor.js"></script>
+    <script type="text/javascript" src="Content/packages/jssor/js/jssor.slider.js"></script>
+    <script type="text/javascript" src="Content/packages/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script type="text/javascript" src="Content/packages/iCheck/icheck.js"></script>
+    <script type="text/javascript" src="Content/packages/multirowselect/multirowselect.js"></script>
+    <script type="text/javascript" src="Content/packages/ion.rangeslider/js/ion.rangeSlider.js"></script>
+    <script type="text/javascript" src="Content/packages/elevatezoom/jquery.elevatezoom.js"></script>
+    <script type="text/javascript" src="Content/packages/touchspin/jquery.bootstrap-touchspin.js"></script>
+    <script type="text/javascript" src="Content/packages/jasny/js/jasny-bootstrap.js"></script>
+    <script type="text/javascript" src="Content/assets/js/app.js"></script>
+</body>
+
+</html>
+
+

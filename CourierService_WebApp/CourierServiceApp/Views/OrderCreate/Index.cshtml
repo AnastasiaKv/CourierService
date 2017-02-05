@@ -1,0 +1,336 @@
+﻿@using Resources
+@using IdentityModule.Models
+@model IdentityModule.Models.LoginViewModel
+@{
+    ViewBag.Title = Resources.SendAParcel;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Resources.SendAParcel</title>
+    <link href="/Content/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/assets/css/bootstrap.vertical-tabs.css">
+    <link rel="stylesheet" href="/Content/packages/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="/Content/packages/ion.rangeslider/css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="/Content/packages/ion.rangeslider/css/ion.rangeSlider.skinFlat.css">
+    <link rel="stylesheet" href="/Content/packages/iCheck/skins/flat/flat.css">
+    <link rel="stylesheet" href="/Content/packages/multirowselect/multirowselect.css">
+    <link rel="stylesheet" href="/Content/packages/touchspin/jquery.bootstrap-touchspin.css">
+    <link rel="stylesheet" href="/Content/packages/jasny/css/jasny-bootstrap.min.css">
+    <link href="/Content/assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body id="page-checkout" class="page-checkout">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-title">@Resources.SendAParcel</h1>
+                <div class="panel-group panel-steps" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseLogin">
+                                    @Resources.AccountDetails
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseLogin" class="panel-collapse collapse in">
+                            <div class="panel-body">
+
+                                <div class="col-md-6 col-md-offset-3">
+                                    <section id="loginForm">
+                                        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <h3>@Resources.Login</h3>
+                                            <hr />
+                                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                            <div class="form-group">
+                                                <div class="col-md-2 control-label">
+                                                    @Resources.EmailAddress
+                                                </div>
+                                                <div class="col-md-10">
+
+                                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-2 control-label">
+                                                    @Resources.Password
+                                                </div>
+                                                <div class="col-md-10">
+                                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-10">
+                                                    <div class="checkbox">
+                                                        @Html.CheckBoxFor(m => m.RememberMe)
+                                                        @Resources.RememberMe
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-10">
+                                                    <input type="submit" value="@Resources.Login" class="btn btn-default" />
+                                                </div>
+                                            </div>
+                                        }
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseShipping">
+                                    @Resources.ParcelDetails
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseShipping" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="">@Resources.ParcelCapacity</label>
+                                            <div class="col-sm-10">
+                                                
+                                                <select class="form-control col-sm-2" name="" id="">
+                                                    <option>@Resources.PleaseSelectWeight</option>
+                                                    <option value="01">> 1 kg</option>
+                                                    <option value="02">1 - 2 kg</option>
+                                                    <option value="03">2 - 5 kg</option>
+                                                    <option value="04">5 - 10 kg</option>
+                                                    <option value="05">10 - 15 kg</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" >@Resources.ParcelContent</label>
+                                            <div class="col-sm-10">
+                                                <input type="text"  class="form-control" >
+                                                <p>@Resources.WhatParcelContain</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="radio col-sm-6">
+                                                <label >
+                                                    <input type="radio"  name="optionsRadios" id="optionsRadios" value="option">@Resources.AgreeText
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <div class="pull-right">
+                                                    <button type="submit" class="btn btn-primary">@Resources.Continue</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseBilling">
+                                    @Resources.DeliveryDetails
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseBilling" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="form-address">@Resources.From</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" placeholder="@Resources.Address" class="form-control" id="form-address">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="form-address2">@Resources.To </label>
+                                            <div class="col-sm-10">
+                                                <input type="text" placeholder="@Resources.Address" class="form-control" id="form-address2">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" for="expiry-month">@Resources.ExpectedDate</label>
+                                            <div class="col-sm-9">
+                                                <div class="row">
+                                                    <div class="col-xs-2">
+                                                        <select class="form-control" name="expiry-day">
+                                                            <option value="001">1</option>
+                                                            <option value="002">2</option>
+                                                            <option value="003">3</option>
+                                                            <option value="004">4</option>
+                                                            <option value="005">5</option>
+                                                            <option value="006">6</option>
+                                                            <option value="007">7</option>
+                                                            <option value="008">8</option>
+                                                            <option value="009">9</option>
+                                                            <option value="010">10</option>
+                                                            <option value="011">11</option>
+                                                            <option value="012">12</option>
+                                                            <option value="013">13</option>
+                                                            <option value="014">14</option>
+                                                            <option value="015">15</option>
+                                                            <option value="016">16</option>
+                                                            <option value="017">17</option>
+                                                            <option value="018">18</option>
+                                                            <option value="019">19</option>
+                                                            <option value="020">20</option>
+                                                            <option value="021">21</option>
+                                                            <option value="022">22</option>
+                                                            <option value="023">23</option>
+                                                            <option value="024">24</option>
+                                                            <option value="025">25</option>
+                                                            <option value="026">26</option>
+                                                            <option value="027">27</option>
+                                                            <option value="028">28</option>
+                                                            <option value="029">29</option>
+                                                            <option value="030">30</option>
+                                                            <option value="031">31</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-2">
+                                                        <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                                                            <option>@Resources.Month</option>
+                                                            <option value="01">@Resources.January</option>
+                                                            <option value="02">@Resources.February</option>
+                                                            <option value="03">@Resources.March</option>
+                                                            <option value="04">@Resources.April</option>
+                                                            <option value="05">@Resources.May</option>
+                                                            <option value="06">@Resources.June</option>
+                                                            <option value="07">@Resources.July</option>
+                                                            <option value="08">@Resources.August</option>
+                                                            <option value="09">@Resources.September</option>
+                                                            <option value="10">@Resources.October</option>
+                                                            <option value="11">@Resources.November</option>
+                                                            <option value="12">@Resources.December</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-2">
+                                                        <select class="form-control" name="expiry-year">
+                                                            <option value="15">2015</option>
+                                                            <option value="16">2016</option>
+                                                            <option value="17">2017</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <div class="pull-right">
+                                                    <button type="submit" class="btn btn-primary">@Resources.Continue</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                         <div class="panel-heading">
+                             <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapsePayment">
+                                     @Resources.Payment
+                                 </a>
+                             </h4>
+                         </div>
+                         <div id="collapsePayment" class="panel-collapse collapse">
+                             <div class="panel-body">
+                                 <form class="form-horizontal" role="form" action="https://api.privatbank.ua/p24api/ishop" method="POST" accept-charset="UTF-8">
+                                     <fieldset>
+                                         <div class="form-group">
+                                             
+                                                 <label class="col-sm-2 control-label" >@Resources.GrandTotal</label>
+                                                 <div class="col-sm-2">
+                                                     <input type="text" class="form-control" name="amt" value="1000">
+                                                 </div>
+                                                 <div class="col-sm-2">
+                                                     <input type="text" class="form-control" name="ccy" value="UAH">
+                                                 </div>
+                                         </div>
+
+                                         <input type="hidden" name="merchant" value="108302" />
+                                         <input type="hidden" name="order" value="26009053130021" />
+                                         <input type="hidden" name="details" value="payment for orders" />
+                                         <input type="hidden" name="ext_details" value="orderId" />
+                                         <input type="hidden" name="pay_way" value="privat24" />
+                                         <input type="hidden" name="return_url" value="http://localhost:4248//OrderCreate/PaymentCallBack" />
+                                         <input type="hidden" name="server_url" value="" />
+                                         <input type="hidden" name="signature" value="" />
+
+                                         <div class="form-group">
+                                             <div class="col-sm-offset-2 col-sm-10">
+                                                 <div class="pull-right">
+                                                     <button type="submit" class="btn btn-success">@Resources.PayNow</button>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </fieldset>
+                                 </form>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/Content/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Content/packages/jssor/js/jssor.js"></script>
+    <script type="text/javascript" src="/Content/packages/jssor/js/jssor.slider.js"></script>
+    <script type="text/javascript" src="/Content/packages/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script type="text/javascript" src="/Content/packages/iCheck/icheck.js"></script>
+    <script type="text/javascript" src="/Content/packages/multirowselect/multirowselect.js"></script>
+    <script type="text/javascript" src="/Content/packages/ion.rangeslider/js/ion.rangeSlider.js"></script>
+    <script type="text/javascript" src="/Content/packages/elevatezoom/jquery.elevatezoom.js"></script>
+    <script type="text/javascript" src="/Content/packages/touchspin/jquery.bootstrap-touchspin.js"></script>
+    <script type="text/javascript" src="/Content/packages/jasny/js/jasny-bootstrap.js"></script>
+    <script type="text/javascript" src="/Content/assets/js/app.js"></script>
+
+    <script>
+        var pass = "v4CRk20slJQfLPO0NkB91s1QZ498IRQf";
+
+        var payment = "amt=" + $("input[name*='amt']").val() + "&\n" +
+                        "ccy=" + $("input[name*='ccy']").val() + "&\n" +
+                        "details=" + $("input[name*='details']").val() + "&\n" +
+                        "ext_details=" + $("input[name*='ext_details']").val() + "&\n" +
+                        "pay_way=" + $("input[name*='pay_way']").val() + "&\n" +
+                        "order=" + $("input[name*='order']").val() + "&\n" +
+                        "merchant=" + $("input[name*='merchant']").val();
+
+        var sign = CryptoJS.MD5(pass).toString();
+        sign = CryptoJS.SHA1(sign).toString();
+        $("#signature").val(CryptoJS.SHA1(CryptoJS.MD5(payment, pass)).toString());
+
+    </script>
+</body>
+
+</html>
+

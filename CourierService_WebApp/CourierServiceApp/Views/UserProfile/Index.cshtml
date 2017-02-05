@@ -1,0 +1,178 @@
+﻿@using Resources
+@{
+    ViewBag.Title = Resources.UserProfile;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@Resources.EditProfile</title>
+    <!-- Bootstrap -->
+    <link href="Content/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Content/assets/css/bootstrap.vertical-tabs.css">
+    <link rel="stylesheet" href="Content/packages/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="Content/packages/touchspin/jquery.bootstrap-touchspin.css">
+    <link rel="stylesheet" href="Content/packages/jasny/css/jasny-bootstrap.min.css">
+    <link rel="stylesheet" href="Content/packages/jasny/css/jasny-bootstrap.min.css">
+    <link href="Content/assets/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body id="page-profile" class="page-profile">
+
+    <!-- start page container -->
+    <div class="container">
+        <div class="row">
+            <!-- start sidebar navigation -->
+            <div class="col-md-2">
+                <!-- start my account panel -->
+                <div class="panel panel-sidebar">
+                    <div class="panel-heading">@Resources.MyAccount</div>
+                    <div class="panel-body">
+                        <ul class="nav nav-list">
+                            <li class="active">
+                                <a href="@Url.Action("Index", "UserProfile")"><i class="fa fa-user"></i> @Resources.EditProfile</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "OrderHistory")"><i class="fa fa-history"></i> @Resources.OrderHistoryUp</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end my account panel -->
+            </div>
+            <!-- end sidebar navigation -->
+            <!-- start profile content -->
+            <div class="col-md-10">
+                <h1 class="page-title">@Resources.EditProfile</h1>
+                <div class="row">
+                    <!-- start column -->
+                    <div class="col-sm-6">
+                        <!-- start account info panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">@Resources.UserInfo</div>
+                            <div class="panel-body">
+                                <!-- start profile form -->
+                                <form class="form" role="form">
+                                    <div class="form-group">
+                                        <label class="control-label">@Resources.FirstName:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="Anastasia">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">@Resources.LastName:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="Kvartalna">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">@Resources.Address:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="Lviv, Ukraine">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">@Resources.Phone:</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="+38 (0**) ** ** ***">
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- end profile form -->
+                            </div>
+                        </div>
+                        <!-- end account info panel -->
+                    </div>
+                    <!-- end column -->
+                    <!-- start column -->
+                    <div class="col-sm-6">
+                        <!-- start username panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">@Resources.ChangeUsername</div>
+                            <div class="panel-body">
+                                <!-- start profile form -->
+                                <form class="form" role="form">
+
+                                    <div class="form-group">
+                                        <label class="control-label">@Resources.Username</label>
+                                        <div class="">
+                                            <input class="form-control" type="text" value="anastasia94">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label"></label>
+                                        <div class="">
+                                            <input type="button" class="btn btn-primary" value="@Resources.SaveChanges">
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- end profile form -->
+                            </div>
+                        </div>
+                        <!-- end username panel -->
+                        <!-- start password panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">@Resources.ChangePassword</div>
+                            <div class="panel-body">
+                                <!-- start password form -->
+                                <form class="form" role="form">
+
+                                    <div class="form-group">
+                                        <label class="control-label">@Resources.OldPassword:</label>
+                                        <div class="">
+                                            <input class="form-control" type="password" value="11111122333">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">@Resources.NewPassword:</label>
+                                        <div class="">
+                                            <input class="form-control" type="password" value="11111122333">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label"></label>
+                                        <div class="">
+                                            <input type="button" class="btn btn-primary" value="@Resources.SaveChanges">
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- end password form -->
+                            </div>
+                        </div>
+                        <!-- end password panel -->
+                    </div>
+                    <!-- end column -->
+                </div>
+            </div>
+            <!-- end profile content -->
+
+        </div>
+
+    </div>
+    <!-- end page container -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="Content/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Content/packages/jssor/js/jssor.js"></script>
+    <script type="text/javascript" src="Content/packages/jssor/js/jssor.slider.js"></script>
+    <script type="text/javascript" src="Content/packages/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script type="text/javascript" src="Content/packages/iCheck/icheck.js"></script>
+    <script type="text/javascript" src="Content/packages/multirowselect/multirowselect.js"></script>
+    <script type="text/javascript" src="Content/packages/ion.rangeslider/js/ion.rangeSlider.js"></script>
+    <script type="text/javascript" src="Content/packages/elevatezoom/jquery.elevatezoom.js"></script>
+    <script type="text/javascript" src="Content/packages/touchspin/jquery.bootstrap-touchspin.js"></script>
+    <script type="text/javascript" src="Content/packages/jasny/js/jasny-bootstrap.js"></script>
+    <script type="text/javascript" src="Content/assets/js/app.js"></script>
+</body>
+
+</html>
+
+

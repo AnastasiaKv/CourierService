@@ -1,0 +1,177 @@
+﻿
+@{
+    ViewBag.Title = "CourierManagment";
+}
+@model CourierServiceApp.Areas.Manager.Models.ManagmentModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Management of UDS</title>
+    <!-- Bootstrap -->
+    <link href="/Content/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/assets/css/bootstrap.vertical-tabs.css">
+    <link rel="stylesheet" href="/Content/packages/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="/Content/packages/touchspin/jquery.bootstrap-touchspin.css">
+    <link rel="stylesheet" href="/Content/packages/jasny/css/jasny-bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/packages/jasny/css/jasny-bootstrap.min.css">
+    <link href="/Content/assets/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body id="page-profile" class="page-profile">
+
+    <!-- start page container -->
+    <div class="container">
+        <div class="row">
+            <!-- start sidebar navigation -->
+            <div class="col-md-2">
+                <!-- start my account panel -->
+                <div class="panel panel-sidebar">
+                    <div class="panel-heading">Service</div>
+                    <div class="panel-body">
+                        <ul class="nav nav-list">
+                            <li class="active">
+                                <a href="@Url.Action("Index", "Home")"><i class="fa fa-archive"></i> Orders</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-bicycle"></i> LuggageDetails</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("CourierManagment", "Home", new { id = Guid.Empty })"><i class="fa fa-user"></i> Couriers</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end my account panel -->
+            </div>
+            <!-- end sidebar navigation -->
+            <!-- start history main content -->
+            <div class="col-md-10">
+                <!-- start page title -->
+                <h1 class="page-title">COURIERS MANAGMENT</h1>
+                <!-- end page title -->
+
+                <div class="form-group">
+                    <ul class="nav ">
+                        <!-- start menu item -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">SELECT COURIER </a>
+                            <ul class="dropdown-menu navmenu-nav" role="menu">
+                                @foreach (var courier in Model.CourierTransportTypes)
+                                {
+                                    <li>
+                                        <a href="@Url.Action("CourierManagment", "Home", new { id = courier.ID })">@courier.Name</a>
+                                    </li>
+                                }
+
+                            </ul>
+                        </li>
+                        <!-- end menu item -->
+                    </ul>
+
+                    @*<label for="subject">SELECT COURIER</label>
+                    <select id="subject" name="subject" class="form-control" required="required">
+                        <option value="" selected=""></option>
+                        @foreach (var courier in Model.CourierTransportTypes)
+                        {
+                            <option href="@Url.Action("CourierManagment", "Home", new { id = courier.ID })" value="courier">@courier.Name</option>
+                        }
+                    </select>*@
+                </div>
+
+                <div>
+                    @if (Model.CouriersOrders != null)
+                    {
+                        var i = 0;
+                        <div class="col-md-12">
+                            <h1 class="page-title">ORDERS</h1>
+                            <table class="table table-striped tcart">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Order ID</th>
+                                        <th>Luggage</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var order in Model.CouriersOrders)
+                                    {
+                                        i++;
+                                        <tr>
+                                            <th>@i</th>
+                                            <th>@order.Order.Name</th>
+                                            <th>@order.LuggageType.Name (@order.LuggageType.Description)</th>
+                                            <th>@order.AddressFrom</th>
+                                            <th>@order.AddressTo</th>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    <div class="col-md-12">
+                        <h1 class="page-title">ORDERS</h1>
+                        <table class="table table-striped tcart">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Order ID</th>
+                                    <th>Luggage</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <th>12a1d952-9704-e511-8295-28e3477cfb43</th>
+                                    <th>Third level (2-5 kg)</th>
+                                    <th>вул.Космонавтів 10, Одеса</th>
+                                    <th>вул.Шевченка 43, Миколаїв</th>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <th>56a1d952-9704-e511-8295-28e3477cfb43</th>
+                                    <th>Fifth level (10-15 kg)</th>
+                                    <th>вул.Перемоги 14, Березівка</th>
+                                    <th>вул.Щорса 85, Чернігів</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDJ7xhXpfXMwqDaFDp_lizt4TCu_EED38s&origin=вулиця+Космонавтів+10,+Одеса,+Одеська+область,+Україна&destination=вулиця+Шевченка+43,+Миколаїв,+Миколаївська+область,+Україна&waypoints=вулиця+Перемоги+14,+Березівка,+Одеська+область,+Україна|вулиця+Щорса+85,+Чернігів,+Чернігівська+область,+Україна&avoid=tolls|highways" height="400" style="border:0; margin-bottom: 20px;" class="col-md-10"></iframe>
+               </div>
+
+        </div>
+    </div>
+    <!-- end page container -->
+
+
+    <script src="/Content/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Content/packages/jssor/js/jssor.js"></script>
+    <script type="text/javascript" src="/Content/packages/jssor/js/jssor.slider.js"></script>
+    <script type="text/javascript" src="/Content/packages/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script type="text/javascript" src="/Content/packages/iCheck/icheck.js"></script>
+    <script type="text/javascript" src="/Content/packages/multirowselect/multirowselect.js"></script>
+    <script type="text/javascript" src="/Content/packages/ion.rangeslider/js/ion.rangeSlider.js"></script>
+    <script type="text/javascript" src="/Content/packages/elevatezoom/jquery.elevatezoom.js"></script>
+    <script type="text/javascript" src="/Content/packages/touchspin/jquery.bootstrap-touchspin.js"></script>
+    <script type="text/javascript" src="/Content/packages/jasny/js/jasny-bootstrap.js"></script>
+    <script type="text/javascript" src="/Content/assets/js/app.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>
+
